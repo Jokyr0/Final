@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class StoreManagementSystem {
     private static final String url = "jdbc:mysql://localhost:3306/inventoryappdb";
     private static final String user = "root";
-    private static final String password = "TheLegend";
+    private static final String password = "pass"; //Yourpassword
     private static Connection connection;
 
 
