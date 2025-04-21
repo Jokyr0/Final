@@ -9,22 +9,12 @@ public class StoreManagementSystem {
 
 
     public static void connectDB() {
-
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("Driver loaded!");
-
+    
             connection = DriverManager.getConnection(url, user, password);
-            var statement = connection.createStatement();
             System.out.println("Connection established!");
-
-            //Show tables
-            System.out.println("Tables in the database: ");
-            var resultSet = statement.executeQuery("SHOW TABLES");
-            while (resultSet.next()) {
-                System.out.println(resultSet.getString(1));
-            }
-
         } catch (ClassNotFoundException e) {
             throw new IllegalStateException("Cannot find the driver in the classpath!", e);
         } catch (SQLException e) {
